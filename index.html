@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Product Management System</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="crud">
+            <div class="header">
+                <h1>cruds</h1>
+                <p>product management system</p>
+            </div>
+            <div class="inputs">
+                <input type="text" class="title" placeholder="Title">
+                <div class="prices">
+                    <input oninput="getTotal()" type="number" class="price" placeholder="Price">
+                    <input oninput="getTotal()" type="number" class="taxes" placeholder="taxes">
+                    <input oninput="getTotal()" type="number" class="ads" placeholder="ads">
+                    <input oninput="getTotal()" type="number" class="discount" placeholder="discount">
+                    <span class="total"></span>
+                </div>
+                <input type="text" class="category" placeholder="category">
+                <input type="number" class="count" placeholder="count (Max create 50 Product)">
+                <span class="submit">Create</span>
+            </div>
+            <div class="outputs">
+                <div class="searchBlock">
+                    <input type="text" class="search" placeholder="search">
+                    <div class="btnSearch">
+                        <span onclick="getSearchMood(this.id)" id="searchTitle" class="searchTitle">Search</span>
+                        <span class="deleteAll"></span>
+                        <span onclick="getSearchMood(this.id)" id="searchCategory" class="searchCategory">Search By Category</span>
+                    </div>
+                    <div class="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Title</th>
+                                    <th>Price</th>
+                                    <th>Taxes</th>
+                                    <th>Ads</th>
+                                    <th>Discount</th>
+                                    <th>Total</th>
+                                    <th>Category</th>
+                                    <th>Update</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody class="tbody"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
